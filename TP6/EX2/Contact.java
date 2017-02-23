@@ -68,4 +68,6 @@ class Contact {
 
         return prenom.equals(o.getPrenom());
     }
+
+    //Préuve git diff.
 }
