@@ -1,26 +1,69 @@
+public class Main {
+	public static void main(String[] args) throws Exception {
+		Telephone tel = new Telephone();
 
+		tel.decrocher();
+		System.out.println(tel);
+		try {
+			tel.composer("6666666");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		tel.voirDerniersNumAppeles();
+		System.out.println(tel);
+		tel.decrocher();
+		System.out.println(tel);
+		tel.raccrocher();
+		System.out.println(tel);
+		try {
+			tel.composer("66666666");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		tel.decrocher();
+		tel.raccrocher();
+		System.out.println("liste des derniers numéros appelés : ");
+		tel.voirDerniersNumAppeles();
+		try{
+			tel.ajouterNouveauContact("Dupond", "Jean", "0102030405");
+			tel.ajouterNouveauContact("Durand", "Pierre", "0908070605");
+			tel.ajouterNouveauContact("Martin", "0908070605");
+			tel.ajouterNouveauContact("Toto", "0102030405");
+		}catch(Exception e){
+			e.printStackTrace();  /// ne devrait pas arriver
+		}
+		System.out.println("liste des contacts commençant par T : ");
+		tel.afficherContacts('T');
+		tel.supprimerContact("Toto", null);
+		System.out.println("liste des contacts commençant par T (après suppression de Toto) : ");
+		tel.afficherContacts('T');
 
-class Main {
+		System.out.println("liste des contacts commençant par D : ");
+		tel.afficherContacts('D');
+		System.out.println("liste des contacts commençant par M : ");
+		tel.afficherContacts('M');
+		System.out.println("liste des contacts commençant par C : ");
+		tel.afficherContacts('C');
 
-    public static void main(String[] args){
-	try {
-	Contact c = new Contact("RODRIGUEZ", "Juan", "5454545");
-	
-	System.out.println(c);
+		System.out.println("le numero 0908070605 correspond à : ");
+		tel.afficherContact("0908070605");
 
-	c.setNom("asdsad");
-	c.setPrenom("asdasdaaa");
-       	System.out.println(c);
-	try {
-	    c.setNumTel(null);
-	} catch(Exception e){
-	    e.printStackTrace();
+		System.out.println("le numero 0908070604 correspond à : ");
+		tel.afficherContact("0908070604");
+
+		tel.composer("0908070605");
+		tel.decrocher();
+		System.out.println(tel);
+		tel.raccrocher();
+		System.out.println(tel);
+		tel.decrocher();
+		System.out.println(tel);
+		tel.decrocher();
+		System.out.println(tel);
+		tel.raccrocher();
+		System.out.println(tel);
+		tel.viderListeDerniersNumAppele();
+		tel.decrocher();
+		System.out.println(tel);
 	}
-	
-	} catch (Exception e){
-	    e.printStackTrace();
-	}
-	
-
-    }
 }
