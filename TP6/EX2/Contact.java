@@ -18,6 +18,7 @@ class Contact {
     public String getNom() {
         return nom;
     }
+
     public void setNom(String nom) throws Exception {
         if (nom == null) throw new Exception("Le nom est null!");
         this.nom = nom;
@@ -26,6 +27,7 @@ class Contact {
     public String getPrenom() {
         return prenom;
     }
+
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
@@ -33,6 +35,7 @@ class Contact {
     public String getNumTel() {
         return numTel;
     }
+
     public void setNumTel(String numTel) throws Exception {
         if (numTel == null) throw new Exception("Le numéro de téléphone est null!");
         this.numTel = numTel;
@@ -54,20 +57,19 @@ class Contact {
     public boolean equals(Object o) {
         if (o == null) return false;
         if (this == o) return true;
-        if (!o instanceof Contact) return false;
+        if (!(o instanceof Contact)) return false;
 
         Contact c = (Contact) o;
 
-        if (!nom.equals(o.getNom())) {
+        if (!nom.equals(c.getNom())){
             return false;
         }
 
         if (prenom == null) {
-            return c.getPrenom() == null:
+            return c.getPrenom() == null;
         }
 
-        return prenom.equals(o.getPrenom());
+        return prenom.equals(c.getPrenom());
     }
 
-    //Préuve git diff.
 }
