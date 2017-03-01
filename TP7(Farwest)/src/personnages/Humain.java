@@ -41,6 +41,6 @@ public class Humain {
     }
 
     public void boire(){
-        System.out.println("Ah! Un bon verre rempli de ma boisson: " + boisson);
+        System.out.println("Ah! Un bon verre rempli de ma boisson: " + boisson + "\n*GLOU GLOU GLOU GLOU*");
     }
 }
