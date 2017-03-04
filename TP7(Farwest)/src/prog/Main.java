@@ -1,18 +1,43 @@
-/* Created by Juansero29 on 3/1/2017 at 20 at 20:34 at 20:38.
- */
+package application;
 
-package prog;
-import personnages.Humain;
+import personnages.*;
+
+public class Main{
+
+    public static void main(String[] yolo){
+
+	Humain vilain = new Brigand("Wario","martini","désagréable", 1200f);
+	Humain mario = new Cowboy("Mario", "froggie", "remarquable");
+	Dame princesse = new Dame("Peach");
 
 
+	mario.sePresenter();
+	princesse.sePresenter();
+	
+	vilain.parler("Je suis vraiment méchant.");
+	
+	((Brigand)vilain).kidnapper(princesse);
+	mario.parler("PAS DE RESPECT RAMENES MA MEUF");
+	vilain.parler("MUAHAHAHAHAHAAA");
+	vilain.sePresenter();
+	mario.parler("Attends, je mange ce champignon et tu vas moins rigoler !");
 
-public class Main {
+	((Cowboy)mario).tirer((Brigand)vilain);
+	((Cowboy)mario).tirer((Brigand)vilain);
 
-    public static void main(String[] args){
-        Humain homosapiens = new Humain("Juan", "Kasteel Rouge");
+	((Cowboy)mario).liberer(princesse);
 
-        homosapiens.parler("Je viens de spawner dans ce monde!");
-        homosapiens.sePresenter();
-        homosapiens.boire();
+	mario.boire();
+	
+	Barman batman = new Barman("Lopo", "Chez señor Lopo");
+
+	batman.sePresenter();
+	batman.parler("j'suis bourré");
+
+	princesse.sePresenter();
+	
+	
     }
+
+
 }

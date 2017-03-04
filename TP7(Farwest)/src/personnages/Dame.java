@@ -11,33 +11,40 @@ public class Dame extends Humain{
     }
 
     public Dame(String nom){
-	super(nom);
-	this.couleurRobe = "rouge passion";
+	this(nom, "lait", "rouge passion");
     }
     public String getCouleurRobe(){
 	return couleurRobe;
     }
     public void setCouleurRobe(String couleur){
 	this.couleurRobe = couleur;
-	super.parler("Regardez ma nouvelle robe"+couleur+" !");
+	parler("Regardez ma nouvelle robe"+couleur+" !");
     }
 
     public boolean isCaptive(){
 	return captive;
     }
     void seFaireKidnapper (Brigand brigand){
-	super.parler("AHHHHHHHHHH AU SECOURS !!!");
+	parler("AHHHHHHHHHH AU SECOURS !!!");
 	captive = true;
     }
     void seFaireLiberer (Cowboy cowboy) throws IllegalStateException{
-	if (!captive) throw new IllegalStateException("Cette dame est déjà libérée"); 
-	super.parler("Merci de m'avoir sauvé gentil Cowboy.");
+	if (!captive){
+	    throw new IllegalStateException("Cette dame est déjà libérée");
+	}
+	parler("Merci de m'avoir sauvé gentil Cowboy.");
 	captive = false;
     }
 
     @Override
+    public String getNom(){
+	return "Miss " + super.getNom();
+    }
+
+    @Override
     public void sePresenter(){
-	System.out.println("Miss "+super.getNom());
+	super.sePresenter();
+	parler(" j'aime ma robe couleur " + couleurRobe);
     }
     
 

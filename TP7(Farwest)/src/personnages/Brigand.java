@@ -15,8 +15,7 @@ public class Brigand extends Humain{
     }
 
     public Brigand(String nom){
-	super(nom);
-	recompense = 100;
+	this(nom, "Tord-Boyaux", "méchant", 100);
     }
 
     public float getMiseAPrix(){
@@ -25,20 +24,26 @@ public class Brigand extends Humain{
 
     public void kidnapper(Dame dame){
 	System.out.println("Ah ah! " + dame.getNom() + ", tu es mienne désormais! ");
-	dame.seFaireKidnapper(this);
+	dame.captive = true;
+    }
+
+    public String getNom(){
+	return super.getNom() + " le " + comportement;
     }
 
     @Override
     public void sePresenter(){
-	System.out.println(super.getNom() + " le " + comportement + ".");
+	super.sePresenter();
+	parler("J'ai l'air " + comportement + " et j'ai déjà kidnappé "
+			  + nbDamesEnlevees + " dames!");
+	parler("Ma tête est mise à prix " + recompense+ "$ !");
+     }
+
+
+    public void seFaireEmprisonner(Sheriff sher){
+	parler("Damned, je suis fait! " + sher.getNom() + ", tu m'as eu! ");
+	enPrison = true;
     }
-
-    
-
-
-    //Damned, je suis fait! (nom_du_sherif), tu m’as eu!
-
-
 
     
 }
