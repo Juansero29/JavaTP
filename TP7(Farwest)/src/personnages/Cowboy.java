@@ -15,7 +15,7 @@ public class Cowboy extends Humain{
     }
 
     public void liberer (Dame dame){
-	super.parler("Je suis arrivé au secours, ma cherie inferieuràtrois");
+	super.parler("Je suis arrivé au secours, ma cherie <3");
 	try {
 	    dame.seFaireLiberer(this);
 	} catch (IllegalStateException i){

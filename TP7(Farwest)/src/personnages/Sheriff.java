@@ -10,12 +10,12 @@ public class Sheriff extends Cowboy {
     }
 
     public Sheriff(String nom){
-        this(nom, "Vin");
+        this(nom, "vin");
     }
 
-    public void coffrer(Brigand brigand) {
-        parler("Au nom de la loi, je vous arrète" + brigand.getNom() + "!");
-        brigand.seFaireEmprisonner(this);
+    public void coffrer(HorsLaLoi bandit) {
+        parler("Au nom de la loi, je vous arrète" + bandit.getNom() + "!");
+        bandit.seFaireEmprisonner(this);
     }
 
     public void rechercherUnBrigand(Brigand brig) {

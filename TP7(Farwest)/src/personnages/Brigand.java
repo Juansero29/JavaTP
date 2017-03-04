@@ -1,6 +1,6 @@
 package personnages;
 
-public class Brigand extends Humain{
+public class Brigand extends Humain implements HorsLaLoi{
     private final static float RECOMPENSE_PAR_FEMME = 242f;
     private String comportement;
     private int nbDamesEnlevees = 0;
@@ -23,7 +23,7 @@ public class Brigand extends Humain{
     }
 
     public void kidnapper(Dame dame){
-	System.out.println("Ah ah! " + dame.getNom() + ", tu es mienne désormais! ");
+	parler("Ah ah! " + dame.getNom() + ", tu es mienne désormais! ");
 	dame.captive = true;
     }
 
