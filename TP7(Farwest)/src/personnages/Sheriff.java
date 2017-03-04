@@ -19,13 +19,13 @@ public class Sheriff extends Cowboy {
     }
 
     public void rechercherUnBrigand(Brigand brig) {
-        System.out.println("OYEZ OYEZ BRAVE GENS!! " + brig.getMiseAPrix() +
+        parler("OYEZ OYEZ BRAVE GENS!! " + brig.getMiseAPrix() +
                 "$ à qui arrêtera " + brig.getNom() + " mort ou vif!!");
     }
 
     @Override
     public void sePresenter() {
         super.sePresenter();
-        parler("J'ai coffré " + nbBrigandsCoffres + " brigands.");
+        parler("\nJ'ai coffré " + nbBrigandsCoffres + " brigands.");
     }
 }

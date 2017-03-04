@@ -21,7 +21,7 @@ public class Barman extends Humain{
 
     @Override
     public void parler(String msg){
-	super.parler(msg + " mon gars.");
+        super.parler(msg + ", mon gars.");
     }
 
 }
