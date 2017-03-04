@@ -13,6 +13,9 @@ public class Barman extends Humain{
 	this(nom,"Chez " + nom);
     }
 
+    public void servir(Humain h) {
+        parler("Tiens un bon verre de " + h.getBoisson());
+    }
     @Override
     public void sePresenter(){
 	super.sePresenter();

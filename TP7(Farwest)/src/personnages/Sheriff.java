@@ -14,7 +14,7 @@ public class Sheriff extends Cowboy {
     }
 
     public void coffrer(HorsLaLoi bandit) {
-        parler("Au nom de la loi, je vous arrète" + bandit.getNom() + "!");
+        parler("Au nom de la loi, je vous arrète " + bandit.getNom() + "!");
         bandit.seFaireEmprisonner(this);
     }
 

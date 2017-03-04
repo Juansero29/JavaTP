@@ -18,6 +18,7 @@ public class Indien extends Humain {
     public void scalper(VisagePale visagePale) {
         visagePale.etreScalpe();
         nbPlumes++;
+        parler("Hahaha! Maintent j'ai " + nbPlumes + " plumes!");
     }
 
     @Override

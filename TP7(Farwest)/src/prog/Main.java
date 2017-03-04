@@ -38,7 +38,7 @@ public class Main {
 
         System.out.println("\n\n");
 
-        narrateur.parler("\nMario va se promener dans un bar...\n " +
+        narrateur.parler("Mario va se promener dans un bar...\n " +
                 "Ce qu'il sait pas: le brigand est sorti de la prison!");
 
 
@@ -74,18 +74,9 @@ public class Main {
 
         clint.coffrer((HorsLaLoi) vilain);
 
-
-
-
-
-
-
-
-
-
-
-
-
+        princesse.parler("Ah! J'suis trop conne! Regarde ma robe!");
+        batman.parler("T'es nulle");
+        princesse.boire();
 
         /*clint.coffrer((Brigand)vilain))
         On peut pas coffrer un Brigand car le compilateur ne sait pas à priori
@@ -95,8 +86,23 @@ public class Main {
         */
 
 
-        //TODO: Test class 'Narrateur'
         //TODO: Test class 'Indien'
+
+
+        narrateur.parler("Après cette formidable situation, un indien rentre");
+
+        Indien porro = new Indien("Vihaan");
+        porro.sePresenter();
+        porro.parler("J'suis un indien chelou, " +
+                "j'viens vous dépiler les gars");
+
+        mario.parler("Casse-toi putain!");
+        batman.servir(porro);
+        princesse.parler("Regarde-lui, il a un dildo dans ses mains! ");
+        porro.parler("Tais-toi merde, c'est un coyote!");
+        porro.scalper(princesse);
+
+
         //TODO: Use interface 'VisagePale'
 
 

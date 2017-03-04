@@ -28,7 +28,7 @@ public class Humain {
 
     public void parler(String texte) {
         if (this instanceof Narrateur) {
-            System.out.println("\n\n(Narrateur) -----");
+            System.out.println("\n-----------------\n(Narrateur) ----- " + texte + "(dit l'histoire...)\n-----------------\n");
         } else {
             System.out.println("(" + nom + ")--- " + texte);
         }

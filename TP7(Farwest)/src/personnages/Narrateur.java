@@ -8,7 +8,7 @@ public class Narrateur extends Humain {
 
     @Override
     public void parler(String texte) {
-        super.parler(texte + "(dit l'histoire...)\n" + "-----------------\n\n");
+        super.parler(texte);
     }
 
 }
