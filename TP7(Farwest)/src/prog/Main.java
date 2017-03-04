@@ -9,6 +9,7 @@ public class Main {
         Humain vilain = new Brigand("Wario", "martini", "désagréable", 1200f);
         Humain mario = new Cowboy("Mario", "froggie", "remarquable");
         Dame princesse = new Dame("Peach", "lait", "rose");
+        Narrateur legrand = new Narrateur("Pluto");
 
 
         mario.sePresenter();
@@ -36,7 +37,7 @@ public class Main {
 
         System.out.println("\n\n");
 
-        System.out.println("\nMario va se promener dans un bar...");
+        legrand.parler("\nMario va se promener dans un bar...");
 
         Barman batman = new Barman("Lopo", "Chez Señor Lopo");
         mario.boire();

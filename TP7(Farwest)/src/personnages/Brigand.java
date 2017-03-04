@@ -25,6 +25,7 @@ public class Brigand extends Humain implements HorsLaLoi, VisagePale {
     public void kidnapper(Dame dame) {
         parler("Ah ah! " + dame.getNom() + ", tu es mienne désormais! ");
         dame.seFaireKidnapper(this);
+        nbDamesEnlevees++;
     }
 
     public String getNom() {
