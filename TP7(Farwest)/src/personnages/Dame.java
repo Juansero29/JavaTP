@@ -1,9 +1,9 @@
 package personnages;
 
-public class Dame extends Humain {
+public class Dame extends Humain implements VisagePale {
 
-    String couleurRobe;
-    boolean captive;
+    private String couleurRobe;
+    private boolean captive;
 
     public Dame(String nom, String boisson, String couleurRobe) {
         super(nom, boisson);
@@ -51,5 +51,8 @@ public class Dame extends Humain {
         parler(" j'aime ma robe couleur " + couleurRobe);
     }
 
-
+    @Override
+    public void etreScalpe() {
+        parler("Aïe! Ma tête! ");
+    }
 }

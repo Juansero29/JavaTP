@@ -8,7 +8,7 @@ public class Main {
 
         Humain vilain = new Brigand("Wario", "martini", "désagréable", 1200f);
         Humain mario = new Cowboy("Mario", "froggie", "remarquable");
-        Dame princesse = new Dame("Peach");
+        Dame princesse = new Dame("Peach", "lait", "rose");
 
 
         mario.sePresenter();
