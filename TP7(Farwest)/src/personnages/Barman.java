@@ -1,6 +1,6 @@
 package personnages;
 
-public class Barman extends Humain{
+public class Barman extends Humain implements VisagePale {
 
     private String nomBar;
     
@@ -27,4 +27,8 @@ public class Barman extends Humain{
         super.parler(msg + ", mon gars.");
     }
 
+    @Override
+    public void etreScalpe() {
+        parler("Aïe putain! Ma tête! Plus de boissons pour toi! ");
+    }
 }

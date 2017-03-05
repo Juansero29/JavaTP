@@ -37,7 +37,7 @@ public class Cowboy extends Humain implements VisagePale {
     @Override
     public void sePresenter() {
         super.sePresenter();
-        parler("\nJe suis " + attitude + " et ma popularité est " + popularite + ".");
+        parler("Je suis " + attitude + " et ma popularité est " + popularite + ".");
     }
 
 }

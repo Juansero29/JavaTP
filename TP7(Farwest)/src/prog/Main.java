@@ -56,7 +56,7 @@ public class Main {
                 "Au même temps, un sheriff s'approche au bar! \n" +
                 "Les problèmes vont commencer... ");
 
-        //TODO: Test class 'Sheriff'
+        //DONE: Test class 'Sheriff'
         System.out.println("\n\n");
 
         //Je change la référence du 'clint' à un Sheriff, ainsi je peux
@@ -86,7 +86,7 @@ public class Main {
         */
 
 
-        //TODO: Test class 'Indien'
+        //DONE: Test class 'Indien'
 
 
         narrateur.parler("Après cette formidable situation, un indien rentre");
@@ -102,8 +102,13 @@ public class Main {
         porro.parler("Tais-toi merde, c'est un coyote!");
         porro.scalper(princesse);
 
+        porro.parler("Alleez! Préparez vos poils! C'est Vihaan qui va vous dépiler! ");
+        porro.scalper(batman);
+        porro.scalper((Cowboy) mario);
 
-        //TODO: Use interface 'VisagePale'
+        porro.parler("Alleez! J'ai scalpé tout le monde, j'm'casse! Tchaoo! ");
+
+        //DONE: Use interface 'VisagePale'
 
 
 

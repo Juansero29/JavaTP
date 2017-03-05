@@ -48,7 +48,7 @@ public class Dame extends Humain implements VisagePale {
     @Override
     public void sePresenter() {
         super.sePresenter();
-        parler(" j'aime ma robe couleur " + couleurRobe);
+        parler(" J'aime ma robe couleur " + couleurRobe);
     }
 
     @Override
