@@ -39,7 +39,7 @@ public class Humain {
     }
 
     public void boire() {
-        parler("Ah ! Un bon verre de " + getBoisson() + "\n GLOU GLOU GLOU!");
+        parler("Ah ! Un bon verre de " + getBoisson() + "\n *GLOU GLOU GLOU*");
     }
     
 

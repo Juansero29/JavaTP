@@ -41,14 +41,11 @@ public class Brigand extends Humain implements HorsLaLoi, VisagePale {
     @Override
     public void sePresenter() {
         super.sePresenter();
-        parler("J'ai l'air " + comportement + " et ");
 
-        if (nbDamesEnlevees > 0) {
-            parler("j'ai déjà kidnappé " + nbDamesEnlevees + " dames!");
-        } else {
-            parler("je n'ai pas encore kidnappé des dames!");
-        }
-
+        parler("J'ai l'air " + comportement + " et " +
+                (nbDamesEnlevees > 0 ?
+                        "j'ai déjà kidnappé " + nbDamesEnlevees + " dames!" : "Ma tête est mise à prix " + recompense + "$ !")
+        );
 
         parler("Ma tête est mise à prix " + recompense + "$ !");
     }

@@ -25,7 +25,7 @@ public class Cowboy extends Humain implements VisagePale {
     }
 
     public void tirer(Brigand brigand) {
-        System.out.println("Le " + attitude + " " + getNom() + " tire sur " + brigand.getNom() + ".\nPAAN!!");
+        System.out.println("*Le " + attitude + " " + getNom() + " tire sur " + brigand.getNom() + ".*\nPAAN!!\n");
         parler("Prends ça, rascal!");
     }
 

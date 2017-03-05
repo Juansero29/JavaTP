@@ -26,6 +26,6 @@ public class Sheriff extends Cowboy {
     @Override
     public void sePresenter() {
         super.sePresenter();
-        parler("\nJ'ai coffré " + nbBrigandsCoffres + " brigands.");
+        parler("J'ai coffré " + nbBrigandsCoffres + " brigands.");
     }
 }
