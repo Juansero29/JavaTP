@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-class Main {
+class Prog {
     public static void main(String[] lol){
 	
 	String message = "Un fichier comme ça il y en a 17 tous les 59"
