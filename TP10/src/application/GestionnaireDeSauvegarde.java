@@ -9,17 +9,17 @@ import java.io.ObjectOutputStream;
 
 public class GestionnaireDeSauvegarde {
 
-	public static LivreRecettes charger(String chemin) throws FileNotFoundException, IOException, ClassNotFoundException {
-		LivreRecettes retour;
-		try (ObjectInputStream reader = new ObjectInputStream(new FileInputStream(chemin))) {
-			retour = (LivreRecettes) reader.readObject();
-		}
-		return retour;
-	}
-	
-	public static void sauvegarder(String chemin,LivreRecettes bouquin) throws FileNotFoundException, IOException {
-		try (ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(chemin))) {
-			writer.writeObject(bouquin);
-		}
-	}
+    public static LivreRecettes charger(String chemin) throws IOException, ClassNotFoundException {
+        LivreRecettes retour;
+        try (ObjectInputStream reader = new ObjectInputStream(new FileInputStream(chemin))) {
+            retour = (LivreRecettes) reader.readObject();
+        }
+        return retour;
+    }
+
+    public static void sauvegarder(String chemin, LivreRecettes bouquin) throws IOException {
+        try (ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(chemin))) {
+            writer.writeObject(bouquin);
+        }
+    }
 }
