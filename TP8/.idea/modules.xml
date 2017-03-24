@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TP8_mapHeritage.iml" filepath="$PROJECT_DIR$/TP8_mapHeritage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP8.iml" filepath="$PROJECT_DIR$/TP8.iml" />
     </modules>
   </component>
 </project>
